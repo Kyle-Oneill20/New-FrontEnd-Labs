@@ -39,7 +39,8 @@ let alphabetString = 'abcdefghijklmnopqrstuvwxyz';
  * 
  * 
  * ↓ YOUR CODE HERE ↓ */
-
+alphabetString.split();
+console.log(alphabetString.split(''))
 
 
 
