@@ -43,9 +43,13 @@ Question 1: Declaring Let and Const variables`)
  * Step 2: Initialize two more variables using 'let' and set one value to your name, and the other to your friends name.
  *
  * ↓ YOUR CODE HERE ↓ */
-
+const food = `Noodles`
+const drink = `Soda`
+let name = `Kyle`
+let friend = `Jack`
+console.log(food, drink, name, friend)
 //Question: Name a reason why you would use const instead of let.
-//Answer:
+//Answer: Const creates a value that can't be change so if you need a constant variable then const is the right choice
 
 /*---------------------------------- Template Literals -------------------------------------*/
 console.log(`-------------------------- 
@@ -57,10 +61,12 @@ Question 2: Template Literals`)
  *
  *
  * ↓ YOUR CODE HERE ↓ */
-
+console.log(
+`${name} and ${friend} are getting ${food} and ${drink} together`
+)
 //Question: How would the sentence you wrote look if you used string concatenation instead of template literals?
 //          console.log() your answer to check
-//Answer:
+//Answer: console.log(name + " and "+ friend+ " are getting "+ food + " and "+ drink + " together")
 console.log(`-------------------------- 
 Question 2a: Oh no`)
 
@@ -71,8 +77,10 @@ Question 2a: Oh no`)
  *
  * ↓ YOUR CODE HERE ↓ */
 
+console.log(drink)
+
 //Question: Read the error message - in your own words - what does it mean?
-//Answer:
+//Answer: It is basically saying that you cant reassign the constant variable
 
 /*---------------------------------- Arrow Functions -------------------------------------*/
 console.log(`-------------------------- 
@@ -90,9 +98,15 @@ Question 3: Arrow Functions`)
  * Step 3: Copy the code below, ↓ paste it underneath our new function, and run the code.
  *         console.log(lunchTime('Pizza','Water'))
  * ↓ YOUR CODE HERE ↓ */
+const lunchTime = (foodChoice, drinkChoice) => {
+  return `${name} and ${friend} are getting ${foodChoice} and ${drinkChoice} together`
+}
+console.log(lunchTime('Pizza','Water'))
 
 //Question: What would your function look like if we were using the old way of creating a function?
-//Answer:
+//Answer: function lunchTime(foodChoice,drinkChoice){
+//       return  `$(name) and $(friend) are getting $(foochoice) and $(drinkCHoice) together`   
+//}
 
 /*---------------------------------- Callbacks -------------------------------------*/
 console.log(`-------------------------- 
@@ -107,5 +121,11 @@ Question 4: Callbacks`)
  * Step 3: console.log() your new function, foodForTodayAndTomorrow, and pass in lunchTime('newFoodItem', 'newDrinkItem') as the argument for the "callbackFunction" parameter.
  *
  * ↓ YOUR CODE HERE ↓ */
+const foodForTodayAndTomorrow=( tomorrowsFoodChoice, tomorrowsDrinkChoice, callBackFunction )=> {
+   return ` ${callBackFunction} Tomorrow we want ${tomorrowsFoodChoice} and ${tomorrowsDrinkChoice}.`
+   
+}
+console.log(foodForTodayAndTomorrow('Pizza', 'Water', lunchTime('Cheese', 'Tea')))
+
 
 console.log(`-----------Finished------------`)
